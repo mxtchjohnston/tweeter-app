@@ -23,3 +23,14 @@ body {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+ main {
+  display: flex;
+  /*width: 90%;*/
+  margin-left: 5%;
+  margin-right: 5%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: inherit;
+ }
