@@ -1,0 +1,17 @@
+.new-tweet button {
+  background-color: #4056A1;
+  color: white;
+}
+
+.new-tweet div {
+  font-family: 'bungee', 'sans serif';
+  display: flex;
+  justify-content: space-between;
+  width: auto;
+}
+
+.new-tweet textarea {
+  border-bottom-color: black;
+  border-bottom: 1em;
+  width: 400px;
+}
