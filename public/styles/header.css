@@ -3,5 +3,9 @@ header {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-top: 400px;
+  margin-top: 120px;
+  height: 400px;
+  width: 100%;
+  background-color: darkgoldenrod;
+  background-image: url('../images/asphalt-light.png')
 }
