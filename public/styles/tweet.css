@@ -2,15 +2,18 @@ article.tweet {
   width: 90%;
   height: fit-content;
   border: solid black 2px;
+  display: flex;
   justify-content: center;
+  flex-direction: column;
   background-color: #f4f1ec;
   transition: box-shadow 0.3s ease;
   padding-left: 1.5em;
   padding-right: 1.5em;
+  margin-top: 1.5em;
 }
 
 article.tweet:hover {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 7px 12px 10px rgba(0, 0, 0, 0.5);
 }
 
 article.tweet header {
@@ -19,6 +22,7 @@ article.tweet header {
   justify-content: space-between;
   flex-direction: row;
   background-color: #f4f1ec;
+  margin-top: 0;
 }
 
 article.tweet footer {
@@ -34,4 +38,8 @@ article.tweet i {
 
 article.tweet i:hover {
   color: goldenrod;
+}
+
+header:last-child {
+  opacity: 50%;
 }
