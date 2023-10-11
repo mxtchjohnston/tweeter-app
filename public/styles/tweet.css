@@ -1,0 +1,26 @@
+article.tweet {
+  width: 90%;
+  height: fit-content;
+  border: solid black 2px;
+  justify-content: center;
+  background-color: #f4f1ec;
+}
+
+article.tweet header {
+  display: flex;
+  height: fit-content;
+  justify-content: space-between;
+  flex-direction: row;
+  background-color: #f4f1ec;
+}
+
+article.tweet footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-top: 2px solid black;
+}
+
+article.tweet i {
+  on
+}
