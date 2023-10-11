@@ -53,11 +53,11 @@ const createTweetElement = function(tweet) {
 
 const renderTweets = function(tweets) {
   const $container = $('#tweet-container');
-  for (const tweet in tweets) {
+  for (const tweet of tweets) {
     $container.append(createTweetElement(tweet));
   }
 };
 
-$(document).ready(() => {
+$(document).ready(function() {
   renderTweets(data);
 });
