@@ -20,9 +20,10 @@ article.tweet header {
   display: flex;
   height: fit-content;
   justify-content: space-between;
+  margin: 0 auto;
   flex-direction: row;
   background-color: #f4f1ec;
-  margin-top: 0;
+  margin-top: 1em;
 }
 
 article.tweet footer {
@@ -40,6 +41,12 @@ article.tweet i:hover {
   color: goldenrod;
 }
 
-header:last-child {
-  opacity: 50%;
+article.tweet img {
+  width: 5rem;
+  height: 5rem;
 }
+
+.dim {
+  opacity: 25%;
+}
+
