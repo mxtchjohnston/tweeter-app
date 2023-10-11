@@ -4,6 +4,13 @@ article.tweet {
   border: solid black 2px;
   justify-content: center;
   background-color: #f4f1ec;
+  transition: box-shadow 0.3s ease;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+}
+
+article.tweet:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 article.tweet header {
@@ -22,5 +29,9 @@ article.tweet footer {
 }
 
 article.tweet i {
-  on
+  transition: color 0.3s ease;
+}
+
+article.tweet i:hover {
+  color: goldenrod;
 }
