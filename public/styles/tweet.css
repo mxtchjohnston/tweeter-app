@@ -39,10 +39,13 @@ article.tweet footer {
   flex-direction: row;
   justify-content: space-between;
   border-top: 2px solid black;
+  padding-top: 0.5rem;
 }
 
 article.tweet i {
   transition: color 0.3s ease;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
 }
 
 article.tweet i:hover {
