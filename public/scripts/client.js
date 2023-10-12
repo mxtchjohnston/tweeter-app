@@ -53,6 +53,18 @@ $(document).ready(function() {
 
   $('.new-tweet form').on('submit', function(event) {
     event.preventDefault();
+    const $tweet = $('#tweet-text').val();
+
+    if ($tweet === '') {
+      alert('The tweet body is empty!');
+      return;
+    }
+
+    if ($tweet.length > 140) {
+      alert('Character limit exceeded!');
+      return;
+    }
+
     const queryString = $(this).serialize();
 
     $.ajax({
