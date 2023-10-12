@@ -31,7 +31,7 @@ const data = [
 ];
 
 const createTweetElement = function(tweet) {
-  const date = new Date(tweet.created_at).getDate();
+  const date = new Date(tweet.created_at);
   return $(`
     <article class="tweet">
         <header>
@@ -40,7 +40,7 @@ const createTweetElement = function(tweet) {
         </header>
         <p>${tweet.content.text}</p>
         <footer>
-          <div>${date}</div>
+          <div>${date.getDate()}/${date.getMonth()}/${date.getFullYear()}</div>
           <div>
             <i class="fa-solid fa-flag"></i>
             <i class="fa-solid fa-retweet"></i>
@@ -60,4 +60,21 @@ const renderTweets = function(tweets) {
 
 $(document).ready(function() {
   renderTweets(data);
+
+  $('.new-tweet form').on('submit', function(event) {
+    event.preventDefault();
+    // console.log($(this).serialize());
+    const queryString = $(this).serialize();
+    console.log(queryString);
+
+    $.ajax({
+      url: `/tweets`,
+      method: 'POST',
+      data: queryString
+    }).done(function(data) {
+      console.log('done', data);
+    }).fail(function(error){
+      console.log('error', error);
+    });
+  });
 });
