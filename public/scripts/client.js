@@ -14,7 +14,7 @@ const createTweetElement = function(tweet) {
         </header>
         <p>${tweet.content.text}</p>
         <footer>
-          <div>${date.getDate()}/${date.getMonth()}/${date.getFullYear()}</div>
+          <div>${timeago.format(date)}</div>
           <div>
             <i class="fa-solid fa-flag"></i>
             <i class="fa-solid fa-retweet"></i>
