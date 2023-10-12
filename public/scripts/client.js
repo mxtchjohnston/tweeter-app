@@ -1,3 +1,4 @@
+
 /*
  * Client-side JS logic goes here
  * jQuery is already loaded
@@ -91,6 +92,7 @@ $(document).ready(function() {
       console.log('done', data);
       $('.new-tweet form').trigger('reset');
       loadTweets();
+      updateCounter();
     }).fail(function(error){
       console.log('error', error);
     });

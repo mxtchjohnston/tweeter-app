@@ -1,7 +1,7 @@
-$(document).ready(function() {
-  const $count = $('#counter');
+const maximum = 140;//Number($count.html());
 
-  const maximum = Number($count.html());
+const updateCounter = function() {
+  const $count = $('#counter');
 
   $('#tweet-text').on('keyup', function() {
     const length = $(this).val().length;
@@ -14,4 +14,8 @@ $(document).ready(function() {
 
     $count.html(charactersLeft);
   });  
+}
+
+$(document).ready(function() {
+  updateCounter() 
 });
