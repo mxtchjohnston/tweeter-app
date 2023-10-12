@@ -3,6 +3,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-family: 'Source Sans 3', 'sans serif';
+  display: flex;
+  justify-content: space-between;
+  width: auto;
+  margin-bottom: 1em;
+  margin-top: 1em;
 }
 
 .new-tweet button {
@@ -10,19 +16,12 @@
   color: white;
 }
 
-.new-tweet  {
-  font-family: 'bungee', 'sans serif';
-  display: flex;
-  justify-content: space-between;
-  width: auto;
-  margin-bottom: 1em;
-}
-
 .new-tweet textarea {
-  border-bottom-color: black;
-  border-bottom: 1em;
+  border: none;
+  border-bottom: 2px solid black;
   width: 90vw;
   resize: none;
+  background-color: #f4f1ec;
 }
 
 .negative {
@@ -34,4 +33,11 @@ main.container {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  font-family: 'Source Sans 3', sans-serif;
+}
+
+section.new-tweet div {
+  font-family: 'Bungee', sans-serif;
+  display: flex;
+  justify-content: space-between;
 }
