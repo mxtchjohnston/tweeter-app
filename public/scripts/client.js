@@ -12,7 +12,7 @@ const createTweetElement = function(tweet) {
           <div><img src="${tweet.user.avatars}"> ${tweet.user.name}</div>
           <div class="dim">${tweet.user.handle}</div>
         </header>
-        <p>${tweet.content.text}</p>
+        <p>${$(tweet.content.text).text()}</p>
         <footer>
           <div>${timeago.format(date)}</div>
           <div>
