@@ -4,32 +4,6 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-//fake data
-const data = [
-  {
-    "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png",
-      "handle": "@SirIsaac"
-    },
-    "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-    "created_at": 1696823131606
-  },
-  {
-    "user": {
-      "name": "Descartes",
-      "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd"
-    },
-    "content": {
-      "text": "Je pense , donc je suis"
-    },
-    "created_at": 1696909531606
-  }
-];
-
 const createTweetElement = function(tweet) {
   const date = new Date(tweet.created_at);
   return $(`
@@ -59,12 +33,13 @@ const renderTweets = function(tweets) {
 };
 
 const loadTweets = function() {
+  $('#tweet-container').empty();
   $.ajax({
     url: '/tweets',
     method: 'GET',
     dataType: 'json',
     success: function(tweets) {
-      renderTweets(tweets);
+      renderTweets(tweets.reverse());
       console.log('successfully rendered tweets');
     },
     error: function(error){
@@ -86,6 +61,8 @@ $(document).ready(function() {
       data: queryString
     }).done(function(data) {
       console.log('done', data);
+      $('.new-tweet form').trigger('reset');
+      loadTweets();
     }).fail(function(error){
       console.log('error', error);
     });
