@@ -63,9 +63,7 @@ $(document).ready(function() {
 
   $('.new-tweet form').on('submit', function(event) {
     event.preventDefault();
-    // console.log($(this).serialize());
     const queryString = $(this).serialize();
-    console.log(queryString);
 
     $.ajax({
       url: `/tweets`,
