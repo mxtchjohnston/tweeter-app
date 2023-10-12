@@ -8,6 +8,7 @@
   display: flex;
   justify-content: space-between;
   width: auto;
+  margin-bottom: 1em;
 }
 
 .new-tweet textarea {
@@ -19,4 +20,12 @@
 
 .negative {
   color: red;
+}
+
+main.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1000px;
 }

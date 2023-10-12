@@ -34,3 +34,11 @@ body {
   align-items: center;
   background-color: inherit;
  }
+
+ .alert {
+  border: 2px solid red;
+  color: red;
+  margin: 1em;
+  display: none;
+  
+ }

@@ -4,6 +4,12 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
+const _escape = function (str) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
+
 const createTweetElement = function(tweet) {
   const date = new Date(tweet.created_at);
   return $(`
@@ -12,7 +18,7 @@ const createTweetElement = function(tweet) {
           <div><img src="${tweet.user.avatars}"> ${tweet.user.name}</div>
           <div class="dim">${tweet.user.handle}</div>
         </header>
-        <p>${$(tweet.content.text).text()}</p>
+        <p>${_escape(tweet.content.text)}</p>
         <footer>
           <div>${timeago.format(date)}</div>
           <div>
@@ -46,6 +52,14 @@ const loadTweets = function() {
       console.log('error:', error);
     }
   })
+};
+
+const alert = function(message) {
+  const $alert = $('.alert');
+  $alert.text(message);
+  $alert.slideDown({
+    duration: 400
+  });
 }
 
 $(document).ready(function() {
@@ -64,6 +78,8 @@ $(document).ready(function() {
       alert('Character limit exceeded!');
       return;
     }
+    
+    $('.alert').hide();
 
     const queryString = $(this).serialize();
 
