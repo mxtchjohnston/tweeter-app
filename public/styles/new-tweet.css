@@ -10,7 +10,7 @@
   color: white;
 }
 
-.new-tweet div {
+.new-tweet  {
   font-family: 'bungee', 'sans serif';
   display: flex;
   justify-content: space-between;
