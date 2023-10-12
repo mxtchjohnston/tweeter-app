@@ -50,3 +50,8 @@ article.tweet img {
   opacity: 25%;
 }
 
+article.tweet p {
+  inline-size: 400px;
+  overflow-wrap: break-word;
+  hyphens: manual;
+}
