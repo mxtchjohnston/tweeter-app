@@ -58,8 +58,23 @@ const renderTweets = function(tweets) {
   }
 };
 
+const loadTweets = function() {
+  $.ajax({
+    url: '/tweets',
+    method: 'GET',
+    dataType: 'json',
+    success: function(tweets) {
+      renderTweets(tweets);
+      console.log('successfully rendered tweets');
+    },
+    error: function(error){
+      console.log('error:', error);
+    }
+  })
+}
+
 $(document).ready(function() {
-  renderTweets(data);
+  loadTweets();
 
   $('.new-tweet form').on('submit', function(event) {
     event.preventDefault();
