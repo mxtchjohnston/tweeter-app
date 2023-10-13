@@ -6,7 +6,7 @@
   font-family: 'Source Sans 3', 'sans serif';
   display: flex;
   justify-content: space-between;
-  width: auto;
+  width: 100%;
   margin-bottom: 1em;
   margin-top: 1em;
   display: none;
@@ -46,4 +46,8 @@ section.new-tweet div {
 .profile {
   display: flex;
   align-items: center;
+}
+
+@media only screen and (min-width: 768px) {
+
 }
