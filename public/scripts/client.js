@@ -5,7 +5,7 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-const _escape = function (str) {
+const _escape = function(str) {
   let div = document.createElement("div");
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
@@ -50,10 +50,10 @@ const loadTweets = function() {
       renderTweets(tweets);
       console.log('successfully rendered tweets');
     },
-    error: function(error){
+    error: function(error) {
       console.log('error:', error);
     }
-  })
+  });
 };
 
 const alert = function(message) {
@@ -103,7 +103,7 @@ const handleSubmit = function() {
       loadTweets();
       $('#counter').html(maximum);
       $tweet.focus();
-    }).fail(function(error){
+    }).fail(function(error) {
       console.log('error', error);
     });
   });
@@ -113,5 +113,5 @@ $(document).ready(function() {
   loadTweets();
   writeTweetButton();
   handleSubmit();
-  updateCounter(); 
+  updateCounter();
 });
