@@ -102,7 +102,6 @@ const handleSubmit = function() {
       $('.new-tweet form').trigger('reset');
       loadTweets();
       $('#counter').html(maximum);
-      $tweet.focus();
     }).fail(function(error) {
       console.log('error', error);
     });
