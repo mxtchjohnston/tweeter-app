@@ -49,5 +49,6 @@ body {
     flex-direction: row;
     margin-top: 15vh;
     justify-content: space-between;
+    width: 100%;
   }
  }

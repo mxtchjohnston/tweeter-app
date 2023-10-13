@@ -78,10 +78,5 @@ article.tweet p {
     margin-top: 0;
     margin-bottom: 1em;
   }
-
-  article.header{
-    width: 0%;
-    justify-content: space-between;
-  }
   /* for the LIFE of me I cannot get the profiles to behave in desktop mode */
 }
