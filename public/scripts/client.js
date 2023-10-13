@@ -61,10 +61,25 @@ const alert = function(message) {
   $alert.slideDown({
     duration: 400
   });
-}
+};
+
+const writeTweetButton = function() {
+  $('span.write').on('click', function() {
+    const $compose = $('.newTweet');
+    $compose.slideDown({
+      duration: 400
+    });
+  });
+};
 
 $(document).ready(function() {
   loadTweets();
+
+  $('span.write').on('click', function() {
+    $('.new-tweet').slideDown({
+      duration: 400
+    });
+  });
 
   $('.new-tweet form').on('submit', function(event) {
     event.preventDefault();

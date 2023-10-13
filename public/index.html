@@ -40,7 +40,7 @@
     <span class="logo">tweeter</span>
     <span class="write">
       <div><b>Write</b> a new tweet</div>
-      <i class="fa-solid fa-angles-down" style="color: #e5231b;"></i>
+      <i class="fa-solid fa-angles-down fa-bounce" style="color: #e5231b;"></i>
     </span>
   </nav>
 
@@ -62,7 +62,7 @@
     <section class="new-tweet">
       <form method="post" action="/tweets/">
         <label for="tweet-text"></label>
-        <textarea name="text" id="tweet-text" rows="1"></textarea>
+        <textarea name="text" id="tweet-text" rows="1" placeholder="What are you humming about?"></textarea>
         <div>
           <button type="submit">Tweet</button>
           <output name="counter" class="counter" id="counter" for="tweet-text">140</output>
