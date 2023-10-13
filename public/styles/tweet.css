@@ -1,5 +1,5 @@
 #tweet-container {
-  width: 90vw;
+  width: 100%;
   display: flex;
   flex-direction: column-reverse;
   justify-content: center;
@@ -67,4 +67,10 @@ article.tweet img {
 article.tweet p {
   overflow-wrap: break-word;
   hyphens: manual;
+}
+
+@media only screen and (min-width: 768px) {
+  article.tweet {
+    margin-top: 0;
+  }
 }

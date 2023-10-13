@@ -3,9 +3,16 @@ header {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-top: 120px;
+  margin-top: 120px; 
   height: 400px;
   width: 100%;
   background-color: darkgoldenrod;
   background-image: url('../images/asphalt-light.png')
+}
+
+@media only screen and (min-width: 768px) {
+  header {
+    width: 33%;
+    margin-top: 0;
+  }
 }
