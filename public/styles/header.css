@@ -15,4 +15,8 @@ header {
     width: 33%;
     margin-top: 0;
   }
+
+  h2 {
+    text-wrap: nowrap;
+  }
 }
