@@ -47,7 +47,7 @@ const loadTweets = function() {
     method: 'GET',
     dataType: 'json',
     success: function(tweets) {
-      renderTweets(tweets.reverse());
+      renderTweets(tweets);
       console.log('successfully rendered tweets');
     },
     error: function(error){
