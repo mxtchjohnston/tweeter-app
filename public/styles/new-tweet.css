@@ -4,8 +4,8 @@
   justify-content: center;
   align-items: center;
   font-family: 'Source Sans 3', 'sans serif';
-  display: flex;
-  justify-content: space-between;
+  /* display: flex; */
+  justify-content: first baseline;
   width: 100%;
   margin-bottom: 1em;
   margin-top: 1em;
@@ -49,5 +49,5 @@ section.new-tweet div {
 }
 
 @media only screen and (min-width: 768px) {
-
+  
 }
