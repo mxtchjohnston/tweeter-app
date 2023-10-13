@@ -69,13 +69,12 @@ const writeTweetButton = function() {
     $('.new-tweet').slideDown({
       duration: 400
     });
+    
+    $('#tweet-text').focus();
   });
 };
 
-$(document).ready(function() {
-  loadTweets();
-  writeTweetButton();
-
+const handleSubmit = function() {
   $('.new-tweet form').on('submit', function(event) {
     event.preventDefault();
     const $tweet = $('#tweet-text').val();
@@ -102,9 +101,17 @@ $(document).ready(function() {
       console.log('done', data);
       $('.new-tweet form').trigger('reset');
       loadTweets();
-      $('#counter').html('140');
+      $('#counter').html(maximum);
+      $tweet.focus();
     }).fail(function(error){
       console.log('error', error);
     });
   });
+};
+
+$(document).ready(function() {
+  loadTweets();
+  writeTweetButton();
+  handleSubmit();
+  updateCounter(); 
 });

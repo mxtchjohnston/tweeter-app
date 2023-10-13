@@ -14,8 +14,4 @@ const updateCounter = function() {
 
     $count.html(charactersLeft);
   });  
-}
-
-$(document).ready(function() {
-  updateCounter() 
-});
+};
