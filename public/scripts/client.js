@@ -5,12 +5,14 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
+//_ becuase escape shadows deprecated function
 const _escape = function(str) {
   let div = document.createElement("div");
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
 };
 
+// Why we use template libraries
 const createTweetElement = function(tweet) {
   const date = new Date(tweet.created_at);
   return $(`
@@ -33,6 +35,7 @@ const createTweetElement = function(tweet) {
   `);
 };
 
+//add each tweet
 const renderTweets = function(tweets) {
   const $container = $('#tweet-container');
   for (const tweet of tweets) {
@@ -40,6 +43,7 @@ const renderTweets = function(tweets) {
   }
 };
 
+//ajax request for tweets
 const loadTweets = function() {
   $('#tweet-container').empty();
   $.ajax({
@@ -56,6 +60,7 @@ const loadTweets = function() {
   });
 };
 
+//cheecky use of name shadowing
 const alert = function(message) {
   const $alert = $('.alert');
   $alert.text(message);
@@ -64,6 +69,7 @@ const alert = function(message) {
   });
 };
 
+//handle reveal of compose box
 const writeTweetButton = function() {
   $('span.write').on('click', function() {
     $('.new-tweet').slideDown({
@@ -74,6 +80,7 @@ const writeTweetButton = function() {
   });
 };
 
+//async request to send tweet and reset page
 const handleSubmit = function() {
   $('.new-tweet form').on('submit', function(event) {
     event.preventDefault();
@@ -108,6 +115,7 @@ const handleSubmit = function() {
   });
 };
 
+//add all handlers when load
 $(document).ready(function() {
   loadTweets();
   writeTweetButton();

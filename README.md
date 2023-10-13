@@ -16,3 +16,9 @@ This repository is the starter code for the project: Students will fork and clon
 
 - Express
 - Node 5.10.x or above
+
+## Gallery
+!["Compose"](./docs/compose.png)
+!["layout"](./docs/layout.png)
+!["mobile"](./docs/mobile.png)
+!["warning"](./docs/warning.png)
