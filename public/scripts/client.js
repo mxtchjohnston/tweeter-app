@@ -66,8 +66,7 @@ const alert = function(message) {
 
 const writeTweetButton = function() {
   $('span.write').on('click', function() {
-    const $compose = $('.newTweet');
-    $compose.slideDown({
+    $('.new-tweet').slideDown({
       duration: 400
     });
   });
@@ -75,12 +74,7 @@ const writeTweetButton = function() {
 
 $(document).ready(function() {
   loadTweets();
-
-  $('span.write').on('click', function() {
-    $('.new-tweet').slideDown({
-      duration: 400
-    });
-  });
+  writeTweetButton();
 
   $('.new-tweet form').on('submit', function(event) {
     event.preventDefault();
@@ -108,7 +102,7 @@ $(document).ready(function() {
       console.log('done', data);
       $('.new-tweet form').trigger('reset');
       loadTweets();
-      updateCounter();
+      $('#counter').html('140');
     }).fail(function(error){
       console.log('error', error);
     });
